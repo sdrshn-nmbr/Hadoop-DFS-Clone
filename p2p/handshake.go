@@ -1,9 +1,5 @@
 package p2p
 
-import (
-	"net"
-)
+type HandshakeFunc func(Peer) error
 
-type HandShaker interface {
-	HandShake() net.Error
-}
+func NOPHandshake(Peer) error { return nil }
